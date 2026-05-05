@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #071e2a;
+}
+
+body {
+  margin: 0;
+  background: #071e2a;
+  color: #111827;
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: #c5f267;
+  color: #111827;
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(17, 24, 39, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.07) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.noise {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(197, 242, 103, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 8%, rgba(24, 160, 166, 0.2), transparent 30%),
+    linear-gradient(115deg, #071e2a 0%, #111827 48%, #172033 100%);
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: #18a0a6;
+}
+
+.hero-field {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(197, 242, 103, 0.18), transparent 26%),
+    radial-gradient(circle at 82% 12%, rgba(24, 160, 166, 0.22), transparent 30%),
+    linear-gradient(120deg, #071e2a 0%, #111827 52%, #172033 100%);
+}
+
+.hero-field::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), transparent 74%);
+}
+
+.flow-orbit {
+  position: relative;
+  min-height: 520px;
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  inset: 8%;
+}
+
+.orbit-ring-one {
+  animation: slow-spin 22s linear infinite;
+}
+
+.orbit-ring-two {
+  inset: 18%;
+  border-color: rgba(197, 242, 103, 0.28);
+  animation: slow-spin 18s linear infinite reverse;
+}
+
+.center-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  height: 190px;
+  width: 190px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 120px rgba(197, 242, 103, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.floating-node {
+  display: flex;
+  min-width: 190px;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  backdrop-filter: blur(18px);
+  animation: float-node 5.5s ease-in-out infinite;
+}
+
+.floating-node:nth-of-type(odd) {
+  animation-delay: -1.2s;
+}
+
+.flow-panel {
+  backdrop-filter: blur(18px);
+}
+
+.proposal-glow {
+  position: absolute;
+  right: -10%;
+  top: 12%;
+  height: 360px;
+  width: 360px;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.18;
+}
+
+.proposal-glow-lime {
+  background: #c5f267;
+}
+
+.proposal-glow-coral {
+  background: #f26d5b;
+}
+
+.proposal-glow-signal {
+  background: #18a0a6;
+}
+
+@keyframes slow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-node {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring,
+  .floating-node {
+    animation: none;
+  }
+}
