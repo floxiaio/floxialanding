@@ -1,4 +1,4 @@
-# Contexto de Floxia IA
+# Contexto de Floxia
 
 ## Identidad
 
@@ -19,11 +19,12 @@ La empresa ayuda a que las organizaciones sean más eficientes y a que sus equip
 ## Necesidades del sitio
 
 - Landing page SEO friendly y GEO friendly.
-- Tres diseños exploratorios dentro del mismo proyecto.
+- Propuesta aprobada: hero de marca, cuatro casos/capacidades y cierre de audiencia, proceso y contacto.
 - Preparado para GitHub y Vercel.
 - El dominio definitivo está pendiente de confirmación.
 
 ## Activos disponibles
 
-- `public/logo-blanco.jpeg`
-- `public/logo-negro.jpeg`
+- Identidad oficial: `public/brand/*.svg`.
+- Fondo hero y portada de La Suma: `public/assets/`.
+- Los JPEG originales se conservan como activos históricos del repositorio.

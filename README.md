@@ -1,44 +1,35 @@
-# Floxia IA Landing
+# Floxia Landing
 
-Landing page de Floxia IA construida con Next.js, Tailwind CSS y TypeScript.
+Landing de Floxia en Next.js, adaptada de la propuesta visual revisada el 22 de septiembre de 2026.
 
-## Requisitos
+## Desarrollo
 
-- Node.js 20.9 o superior
-- npm
-
-## Desarrollo Local
+Requiere Node.js 20.9 o superior.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Abre `http://127.0.0.1:3000`.
-
-## Verificación Antes De Subir A GitHub
+## Verificación
 
 ```bash
 npm run verify
 ```
 
-Este comando ejecuta lint, build de producción y auditoría de dependencias de producción.
+Incluye lint, build de producción y auditoría de dependencias de producción. El workflow de GitHub ejecuta estos mismos controles al recibir cambios en main.
 
-## Deploy En Vercel
+## Contenido e interacción
 
-1. Crea el repo en GitHub y sube este proyecto.
-2. Importa el repo desde Vercel.
-3. Configura `NEXT_PUBLIC_SITE_URL` con el dominio final, por ejemplo:
+- Hero con identidad oficial, fondo animado y navegación superior desplegable.
+- Cuatro secciones de igual altura: Mobilet, La Suma, reportes de operación y agentes de abastecimiento, con fondos alternados.
+- Entradas marcadas de los mockups, aparición individual de audiencia y secuencia en los cuatro pasos de trabajo. Movimiento reducido y teclado conservan contenido visible.
+- Detalles mediante `?caso=mobilet`, `?caso=la-suma`, `?caso=reportes-de-operacion` y `?caso=agentes-de-abastecimiento`.
+- Mobilet y La Suma son proyectos reales. Reportes y agentes son ejemplos ilustrativos de capacidades desarrolladas. La portada de La Suma contiene una nota ficticia sobre Floxia.
+- El formulario es una muestra: no envía ni guarda datos. Su conexión a un canal real de contacto queda pendiente.
 
-```bash
-NEXT_PUBLIC_SITE_URL=https://floxia.ai
-```
+## Despliegue
 
-Si todavía no tienes dominio confirmado, el proyecto usa `https://floxia.ai` como valor temporal para metadata, sitemap y JSON-LD.
+Se conserva la configuración Next.js/Vercel del repositorio. Configurar `NEXT_PUBLIC_SITE_URL` con el dominio final. El fallback existente sigue siendo `https://floxia.ai` para metadata, sitemap y robots.
 
-## Seguridad
-
-- No se deben subir archivos `.env*`.
-- Los logs locales `codex-dev-*` están ignorados.
-- La app incluye headers básicos de seguridad desde `next.config.mjs`.
-- No hay rutas API, cookies, autenticación ni formularios en esta versión.
+No subir archivos .env, dependencias instaladas, builds ni capturas de trabajo. Los SVG de marca y las imágenes utilizadas por la landing están en public.

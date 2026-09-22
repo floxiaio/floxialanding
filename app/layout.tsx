@@ -5,14 +5,15 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://floxia.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: { icon: "/brand/floxia-favicon.svg" },
   title: {
-    default: "Floxia IA | Aplicaciones web, apps e IA para empresas eficientes",
-    template: "%s | Floxia IA"
+    default: "Floxia — Tecnología para tu negocio",
+    template: "%s | Floxia"
   },
   description:
-    "Floxia IA diseña y desarrolla aplicaciones web, apps para app stores, automatizaciones e inteligencia artificial para elevar la eficiencia operativa de empresas.",
+    "Diseñamos sistemas, automatizaciones y productos digitales alrededor de tu negocio. Más presencia digital, menos trabajo repetitivo y mayor control.",
   keywords: [
-    "Floxia IA",
+    "Floxia",
     "desarrollo de aplicaciones web",
     "apps empresariales",
     "automatización de procesos",
@@ -21,17 +22,17 @@ export const metadata: Metadata = {
     "consultoría IA"
   ],
   openGraph: {
-    title: "Floxia IA",
+    title: "Floxia",
     description:
       "Aplicaciones web, apps y automatización con IA para que los equipos se enfoquen en trabajo de alto valor.",
     url: siteUrl,
-    siteName: "Floxia IA",
+    siteName: "Floxia",
     images: [
       {
         url: "/logo-negro.jpeg",
         width: 1024,
         height: 1024,
-        alt: "Logo de Floxia IA"
+        alt: "Logo de Floxia"
       }
     ],
     locale: "es_MX",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Floxia IA",
+    title: "Floxia",
     description:
       "IA, automatización y desarrollo de productos digitales para empresas."
   },

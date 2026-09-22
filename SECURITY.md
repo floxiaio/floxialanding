@@ -2,7 +2,7 @@
 
 ## Alcance Actual
 
-Esta versión es una landing estática en Next.js. No incluye rutas API, autenticación, cookies, formularios, carga de archivos, base de datos ni almacenamiento del lado del cliente.
+Esta versión es una landing estática en Next.js. No incluye rutas API, autenticación, cookies, carga de archivos, base de datos ni almacenamiento del lado del cliente. El formulario de contacto es una muestra local que no envía ni persiste datos.
 
 ## Controles Incluidos
 
