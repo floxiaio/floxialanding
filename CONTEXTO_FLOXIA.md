@@ -29,7 +29,7 @@ La empresa ayuda a que las organizaciones sean más eficientes y a que sus equip
 - Responsable inicial de todos los prospectos recibidos desde la landing: el usuario existente `riosje@gmail.com`, por instrucción del usuario del 22 de septiembre de 2026.
 - La integración debe resolver esa cuenta y asignar el registro de forma que sea visible para ella en Floxia Control. No sustituir al responsable por otra cuenta si no se encuentra la indicada.
 - La asignación es inicial; no debe sobrescribir reasignaciones posteriores ni cambiar responsables de registros existentes.
-- La conexión está implementada mediante `/api/leads` y el receptor privado `landing-leads`. La activación requiere variables privadas y receptor desplegado. El estado de publicación y la verificación real se registran en [docs/LEADS.md](docs/LEADS.md).
+- La conexión está implementada y publicada mediante `/api/leads` y el receptor privado `landing-leads`, con variables privadas configuradas. La prueba real confirmó guardado en Prospecto con `riosje@gmail.com` como responsable inicial. Evidencia y operación en [docs/LEADS.md](docs/LEADS.md).
 
 ## Activos disponibles
 
