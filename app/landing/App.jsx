@@ -19,6 +19,10 @@ function Contact() {
       <p className="chapter-kicker">EMPECEMOS POR TU NEGOCIO</p>
       <h2>Tu siguiente sistema empieza con una conversación.</h2>
       <p>Cuéntanos qué proceso quieres mejorar o qué producto quieres lanzar.</p>
+      <div className="contact-whatsapp">
+        <a className="button button--primary" href="https://wa.me/522226129938?text=Hola%2C%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20proyecto%20con%20Floxia." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp <span aria-hidden="true">↗</span></a>
+        <span>222 612 9938</span>
+      </div>
       <div className="next-step"><span>¿QUÉ SIGUE?</span><p>Primero entendemos cómo trabajas. Después definimos contigo un primer alcance y los siguientes pasos.</p></div>
     </div>
     <form className="contact-form" data-reveal="rise" onSubmit={(event) => { event.preventDefault(); setNotice(true); }}>
