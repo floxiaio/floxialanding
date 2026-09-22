@@ -107,3 +107,9 @@ test("supplemental burst guard limits and expires; rejected bursts never call re
   assert.equal(response.status, 429);
   assert.equal(response.headers.get("retry-after"), "60");
 });
+
+test("preserves daily receiver limits in Retry-After", async () => {
+  const response = await call(request(), { fetcher: async () => Response.json({ ok: false }, { status: 429, headers: { "Retry-After": "86400" } }) });
+  assert.equal(response.status, 429);
+  assert.equal(response.headers.get("retry-after"), "86400");
+});
