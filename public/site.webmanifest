@@ -1,0 +1,20 @@
+{
+  "name": "Floxia",
+  "short_name": "Floxia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191C1F",
+  "theme_color": "#191C1F",
+  "icons": [
+    {
+      "src": "/brand/floxia-icon-192-v2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/floxia-icon-512-v2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

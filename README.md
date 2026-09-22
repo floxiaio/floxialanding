@@ -30,6 +30,14 @@ Incluye lint, build de producción y auditoría de dependencias de producción. 
 
 ## Despliegue
 
-Se conserva la configuración Next.js/Vercel del repositorio. Configurar `NEXT_PUBLIC_SITE_URL` con el dominio final. El fallback existente sigue siendo `https://floxia.ai` para metadata, sitemap y robots.
+Se conserva la configuración Next.js/Vercel del repositorio. El dominio público confirmado es `https://www.floxia.io`; configurar `NEXT_PUBLIC_SITE_URL` con ese valor. Metadata, datos estructurados, sitemap y robots usan ese mismo dominio como fallback.
 
 No subir archivos .env, dependencias instaladas, builds ni capturas de trabajo. Los SVG de marca y las imágenes utilizadas por la landing están en public.
+
+## Identidad y vistas al compartir
+
+Las fuentes oficiales son `public/brand/floxia-logo-primary.svg`, `public/brand/floxia-logo-inverse.svg` y `public/brand/floxia-favicon.svg`. Los iconos y las imágenes para compartir se derivan de estos SVG; no se redibuja la marca.
+
+- Open Graph usa `public/brand/floxia-share-square-v2.png` (1024 × 1024); Twitter usa `public/brand/floxia-share-wide-v2.png` (1200 × 630).
+- Los iconos SVG, ICO, PNG y Apple, junto con `public/site.webmanifest`, usan la identidad actual. Las rutas versionadas permiten solicitar los nuevos activos sin reutilizar las imágenes anteriores.
+- `public/logo-negro.jpeg` y `public/logo-blanco.jpeg` conservan sus rutas por compatibilidad, pero su contenido se reemplaza con la identidad oficial actual; ya no son los JPEG históricos.

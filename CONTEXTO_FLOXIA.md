@@ -21,10 +21,12 @@ La empresa ayuda a que las organizaciones sean más eficientes y a que sus equip
 - Landing page SEO friendly y GEO friendly.
 - Propuesta aprobada: hero de marca, cuatro casos/capacidades y cierre de audiencia, proceso y contacto.
 - Preparado para GitHub y Vercel.
-- El dominio definitivo está pendiente de confirmación.
+- Dominio público confirmado: `https://www.floxia.io`.
 
 ## Activos disponibles
 
-- Identidad oficial: `public/brand/*.svg`.
+- Fuentes oficiales de identidad: `public/brand/floxia-logo-primary.svg`, `public/brand/floxia-logo-inverse.svg` y `public/brand/floxia-favicon.svg`.
 - Fondo hero y portada de La Suma: `public/assets/`.
-- Los JPEG originales se conservan como activos históricos del repositorio.
+- Vistas al compartir: `public/brand/floxia-share-square-v2.png` para Open Graph y `public/brand/floxia-share-wide-v2.png` para Twitter, derivadas de la identidad oficial.
+- Iconos de navegador y dispositivos derivados del símbolo oficial; `public/site.webmanifest` declara los PNG de 192 y 512 píxeles.
+- Las rutas heredadas `public/logo-negro.jpeg` y `public/logo-blanco.jpeg` sirven reemplazos con la marca actual por compatibilidad; no conservan los JPEG originales.

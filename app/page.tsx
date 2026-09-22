@@ -1,6 +1,6 @@
 import { App } from "./landing/App";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://floxia.ai";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.floxia.io";
 const services = [
   "Sistemas para operar",
   "Páginas y aplicaciones",

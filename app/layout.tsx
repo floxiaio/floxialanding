@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://floxia.ai";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.floxia.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  icons: { icon: "/brand/floxia-favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/brand/floxia-favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=2", type: "image/x-icon" },
+      { url: "/brand/floxia-icon-32-v2.png", type: "image/png", sizes: "32x32" }
+    ],
+    apple: [{ url: "/apple-touch-icon.png?v=2", type: "image/png", sizes: "180x180" }]
+  },
+  manifest: "/site.webmanifest",
   title: {
     default: "Floxia — Tecnología para tu negocio",
     template: "%s | Floxia"
@@ -29,10 +37,11 @@ export const metadata: Metadata = {
     siteName: "Floxia",
     images: [
       {
-        url: "/logo-negro.jpeg",
+        url: "/brand/floxia-share-square-v2.png",
         width: 1024,
         height: 1024,
-        alt: "Logo de Floxia"
+        type: "image/png",
+        alt: "Identidad oficial de Floxia sobre fondo grafito"
       }
     ],
     locale: "es_MX",
@@ -42,7 +51,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Floxia",
     description:
-      "IA, automatización y desarrollo de productos digitales para empresas."
+      "IA, automatización y desarrollo de productos digitales para empresas.",
+    images: [
+      {
+        url: "/brand/floxia-share-wide-v2.png",
+        width: 1200,
+        height: 630,
+        alt: "Floxia — Tecnología para tu negocio"
+      }
+    ]
   },
   alternates: {
     canonical: "/"
