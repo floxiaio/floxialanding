@@ -17,7 +17,7 @@ npm run dev
 npm run verify
 ```
 
-Incluye lint, build de producción y auditoría de dependencias de producción. El workflow de GitHub ejecuta estos mismos controles al recibir cambios en main.
+Incluye pruebas de formulario y endpoint, lint, build de producción y auditoría de dependencias de producción. El workflow de GitHub ejecuta estos mismos controles al recibir cambios en main.
 
 ## Contenido e interacción
 
@@ -26,7 +26,7 @@ Incluye lint, build de producción y auditoría de dependencias de producción. 
 - Entradas marcadas de los mockups, aparición individual de audiencia y secuencia en los cuatro pasos de trabajo. Movimiento reducido y teclado conservan contenido visible.
 - Detalles mediante `?caso=mobilet`, `?caso=la-suma`, `?caso=reportes-de-operacion` y `?caso=agentes-de-abastecimiento`.
 - Mobilet y La Suma son proyectos reales. Reportes y agentes son ejemplos ilustrativos de capacidades desarrolladas. La portada de La Suma contiene una nota ficticia sobre Floxia.
-- El formulario es una muestra: no envía ni guarda datos. Su conexión a un canal real de contacto queda pendiente.
+- El formulario envía a `POST /api/leads`; el servidor valida y entrega al receptor `landing-leads` de Floxia Control. Solo confirma recepción con un acuse de guardado durable. Destino: Clientes → Prospecto, con `riosje@gmail.com` como responsable inicial resuelto exclusivamente por backend. Ver [integración y estado de despliegue](docs/LEADS.md) y [regla de asignación](CONTEXTO_FLOXIA.md#recepción-de-prospectos).
 
 ## Despliegue
 

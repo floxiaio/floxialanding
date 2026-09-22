@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { MobiletScene, LaSumaScene, ReportsScene, AgentsScene } from "./CaseScenes";
 import { cases } from "./cases";
 import { useScrollReveal } from "./useScrollReveal";
+import ContactForm from "./ContactForm";
 
 const scenes = [MobiletScene, LaSumaScene, ReportsScene, AgentsScene];
 
@@ -13,7 +14,6 @@ function CaseLink({ item }) {
 }
 
 function Contact() {
-  const [notice, setNotice] = useState(false);
   return <section className="contact-section" id="contacto">
     <div className="contact-intro" data-reveal="rise">
       <p className="chapter-kicker">EMPECEMOS POR TU NEGOCIO</p>
@@ -24,13 +24,7 @@ function Contact() {
       </div>
       <div className="next-step"><span>¿QUÉ SIGUE?</span><p>Primero entendemos cómo trabajas. Después definimos contigo un primer alcance y los siguientes pasos.</p></div>
     </div>
-    <form className="contact-form" data-reveal="rise" onSubmit={(event) => { event.preventDefault(); setNotice(true); }}>
-      <label htmlFor="name">Nombre</label><input id="name" name="name" autoComplete="name" required />
-      <label htmlFor="email">Correo electrónico</label><input id="email" name="email" type="email" autoComplete="email" required />
-      <label htmlFor="need">¿Qué quieres mejorar o construir?</label><textarea id="need" name="need" rows="3" placeholder="Cuéntanos brevemente tu necesidad." required />
-      <button className="button button--primary" type="submit">Hablemos de tu proyecto <span aria-hidden="true">↗</span></button>
-      <p className="preview-note" role={notice ? "status" : undefined}>{notice ? "Esta vista previa no envía mensajes ni guarda tus datos." : "Formulario de muestra · El envío aún no está conectado."}</p>
-    </form>
+    <ContactForm />
   </section>;
 }
 
